@@ -21,45 +21,15 @@ include 'db.php';
         <a href="shop.php" class="btn btn-primary btn-lg mt-3">Start Shopping</a>
     </div>
 </section>
-
-<!-- About Section -->
-    <section class="section " id="about">
-        <div class="container mt-5 text-center">
-             <h2 class="section-title" style="color:white; ">How to Use This Website</h2>
-            <div class="video-box" style="height: 750px;" >  <!-- place css for video -->
-                <video style=" width: 1300px;" controls>   <!-- size css for video -->
-                    <source src="finalwebdemo.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-        </div>
-    </section>
-
     
-<!-- Image carousel -->
-<div class="container mt-5 ">
-    <div id="mainSlider" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active" >
-                <img src="images/black.PNG" class="d-block w-100" alt="Slide 1">
-            </div>
-            <div class="carousel-item">
-                <img src="images/numimage.png" class="d-block w-100" alt="Slide 2">
-            </div>
-            <div class="carousel-item">
-                <img src="images/num3.png" class="d-block w-100" alt="Slide 3">
-            </div>
-            <div class="carousel-item">
-                <img src="images/img4.png" class="d-block w-100" alt="Slide 4">
-            </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#mainSlider" data-bs-slide="prev" >
-            <span class="carousel-control-prev-icon" ></span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#mainSlider" data-bs-slide="next">
-            <span class="carousel-control-next-icon"></span>
-        </button>
-    </div>
+<!-- Image marquee -->
+<div class="container mt-5 text-center">
+    <marquee behavior="scroll" style="height: 500px; width: 1400px;" direction="left" scrollamount="6" onmouseover="this.stop();" onmouseout="this.start();">
+        <img src="images/black.PNG" alt="Image 1" height="500" style="margin-right:20px;">
+        <img src="images/numimage.png" alt="Image 2" height="500" style="margin-right:20px;">
+        <img src="images/num3.png" alt="Image 3" height="500" style="margin-right:20px;">
+        <img src="images/img4.png" alt="Image 4" height="500" style="margin-right:20px;">
+    </marquee>
 </div>
 
 <div style="color: rgb(238, 240, 242);">
@@ -172,25 +142,37 @@ include 'db.php';
     </div>
 </section>
 
-    <!-- Testimonials 1-->
-     <?php
-// Fetch testimonials grouped by type
-try {
-    // First, get unique user types with testimonials
-    $types_stmt = $conn->query("SELECT DISTINCT type FROM testimonials ORDER BY type");
-    $types = $types_stmt->fetchAll(PDO::FETCH_COLUMN);
 
-    foreach ($types as $type) {
+<!-- About Section -->
+    <section class="section " id="about">
+        <div class="container mt-5 text-center">
+             <h2 class="section-title" style="color:white; ">How to Use This Website</h2>
+            <div class="video-box" style="height: 750px;" >  <!-- place css for video -->
+                <video style=" width: 1300px;" controls>   <!-- size css for video -->
+                    <source src="finaldemo.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </section>
+
+<!-- Testimonials -->
+<?php
+try {
+    // Define only the types you want to show
+    $allowedTypes = ['Customer', 'Seller'];
+
+    foreach ($allowedTypes as $type) {
         // Fetch testimonials for this type
         $stmt = $conn->prepare("SELECT name, comment, rating FROM testimonials WHERE type = :type ORDER BY id DESC");
         $stmt->execute([':type' => $type]);
         $testimonials = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
         if ($testimonials) {
-            // Generate a carousel ID unique to the type (no spaces etc.)
-            $carouselId = strtolower(str_replace(' ', '', $type)) . 'Carousel';
+            // Unique carousel ID
+            $carouselId = strtolower($type) . 'Carousel';
             ?>
-
+            
             <section class="container mt-5">
                 <h2 class="section-title text-center">What Our <?php echo htmlspecialchars($type); ?>s Say</h2>
                 <div id="<?php echo $carouselId; ?>" class="carousel slide" data-bs-ride="carousel">
@@ -198,7 +180,7 @@ try {
 
                         <?php foreach ($testimonials as $index => $testimonial): ?>
                             <div class="carousel-item <?php echo $index === 0 ? 'active' : ''; ?>">
-                                <div class="testimonial">
+                                <div class="testimonial text-center">
                                     <p style="color: black;">
                                         "<?php echo nl2br(htmlspecialchars($testimonial['comment'])); ?>"
                                     </p>
@@ -229,7 +211,6 @@ try {
 }
 ?>
 
-</div>
 
 <!-- Footer -->
 <?php require_once  "footar.php"; ?>

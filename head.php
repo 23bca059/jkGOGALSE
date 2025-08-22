@@ -19,7 +19,6 @@
         .feature-icon { font-size: 3rem; color: #0d6efd; }
         .category-card i { font-size: 2.5rem; margin-bottom: 10px; }
         .testimonial { background-color: white; padding: 25px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.05); margin-bottom: 20px; }
-        footer { background-color: #343a40; color: white; padding: 30px 0; }
     </style>
 </head>
 <body>
