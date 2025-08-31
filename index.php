@@ -16,145 +16,186 @@ include 'db.php';
 <!-- Hero section -->
 <section class="hero">
     <div class="container">
-        <h1>Welcome to GoGalse</h1>
-        <p class="lead">Your trusted platform for buying and selling top-quality products.</p>
-        <a href="shop.php" class="btn btn-primary btn-lg mt-3">Start Shopping</a>
+        <h1 class="fade-in">SAVANT EYEWEAR</h1>
+        <p class="lead slide-up">Featuring our iconic frames, this collection draws inspiration from the unique mix of downtown living. The frames are designed to be excellent that are synonymous with urban life, while also offering the comfort and functionality.</p>
+        <a href="shop.php" class="btn btn-primary btn-lg mt-4">ALL PRODUCTS</a>
     </div>
 </section>
     
-<!-- Image marquee -->
-<div class="container mt-5 text-center">
-    <marquee behavior="scroll" style="height: 500px; width: 1400px;" direction="left" scrollamount="6" onmouseover="this.stop();" onmouseout="this.start();">
-        <img src="images/black.PNG" alt="Image 1" height="500" style="margin-right:20px;">
-        <img src="images/numimage.png" alt="Image 2" height="500" style="margin-right:20px;">
-        <img src="images/num3.png" alt="Image 3" height="500" style="margin-right:20px;">
-        <img src="images/img4.png" alt="Image 4" height="500" style="margin-right:20px;">
-    </marquee>
-</div>
-
-<div style="color: rgb(238, 240, 242);">
-
- <!-- avalibal Features -->
-    <section class="container mt-5 text-center">
-    <h2 class="section-title">Available Features</h2>
-
+<!-- Featured Products Carousel -->
+<div class="container mt-5">
     <div class="row">
-        <!-- Feature 1 -->
-        <div class="col-md-4">
-            <div class="feature-icon mb-3"><i class="fas fa-shipping-fast"></i></div>
-            <h5>Fast Delivery</h5>
-            <p>Speedy shipping across the country at no extra cost.</p>
+        <!-- New Sunglasses -->
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="product-card">
+                <img src="images/black.PNG" alt="Classic Black Frame" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">NEW SUNGLASSES</h5>
+                    <p class="text-muted">Classic Black Frame</p>
+                    <div class="price">$89.99</div>
+                    <div class="rating mb-2">
+                        <span class="text-warning">★★★★★</span>
+                        <small class="text-muted">(124 reviews)</small>
+                    </div>
+                    <button class="btn">SHOP NOW</button>
+                </div>
+            </div>
         </div>
-
-        <!-- Feature 2 -->
-        <div class="col-md-4">
-    <div class="feature-icon mb-3">
-       <i class="fas fa-calendar-check text-primary"></i>
- <!-- Changed icon -->
+        
+        <!-- Clear Frame Glasses -->
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="product-card">
+                <img src="images/numimage.png" alt="Designer Sunglasses" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">NEW ARRIVAL</h5>
+                    <p class="text-muted">Designer Sunglasses</p>
+                    <div class="price">$129.99</div>
+                    <div class="rating mb-2">
+                        <span class="text-warning">★★★★★</span>
+                        <small class="text-muted">(89 reviews)</small>
+                    </div>
+                    <button class="btn">SHOP NOW</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Blue Light Glasses -->
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="product-card">
+                <img src="images/num3.png" alt="Blue Light Blocker" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">NEW ARRIVAL</h5>
+                    <p class="text-muted">Blue Light Blocker</p>
+                    <div class="price">$69.99</div>
+                    <div class="rating mb-2">
+                        <span class="text-warning">★★★★★</span>
+                        <small class="text-muted">(156 reviews)</small>
+                    </div>
+                    <button class="btn">SHOP NOW</button>
+                </div>
+            </div>
+        </div>
     </div>
-    <h5>Eye Test Booking</h5> 
-    <p>Book your eye test appointment easily and get expert vision care.</p> 
 </div>
 
-        <!-- Feature 3 -->
-        <div class="col-md-4">
-            <div class="feature-icon mb-3"><i class="fas fa-prescription"></i></div>
-            <h5>Prescription Support</h5>
-            <p>Easily upload your prescription for customized lenses.</p>
+<!-- Service Features -->
+<section class="container mt-5" style="background: var(--light-bg); padding: 4rem 2rem; border-radius: 15px;">
+    <div class="row text-center">
+        <div class="col-lg-3 col-md-6 mb-4">
+            <div class="feature-card">
+                <i class="fas fa-truck feature-icon"></i>
+                <h5>Free Shipping</h5>
+                <p>On orders over $50</p>
+                <small class="text-muted">Hassle-free returns</small>
+            </div>
         </div>
-    </div>
-
-    <div class="row mt-4">
-        <!-- Feature 4 -->
-        <div class="col-md-4">
-            <div class="feature-icon mb-3"><i class="fas fa-user-check"></i></div>
-            <h5>Trusted Sellers</h5>
-            <p>All sellers are verified for top-quality products and service.</p>
+        <div class="col-lg-3 col-md-6 mb-4">
+            <div class="feature-card">
+                <i class="fas fa-undo feature-icon"></i>
+                <h5>30-Day Returns</h5>
+                <p>Hassle-free returns</p>
+                <small class="text-muted">Premium materials only</small>
+            </div>
         </div>
-
-        <!-- Feature 5 -->
-        <div class="col-md-4">
-            <div class="feature-icon mb-3"><i class="fas fa-headset"></i></div>
-            <h5>24/7 Support</h5>
-            <p>Customer assistance whenever you need it, day or night.</p>
+        <div class="col-lg-3 col-md-6 mb-4">
+            <div class="feature-card">
+                <i class="fas fa-award feature-icon"></i>
+                <h5>Quality Guarantee</h5>
+                <p>Premium materials only</p>
+                <small class="text-muted">Professional assistance</small>
+            </div>
         </div>
-
-        <!-- Feature 6 -->
-        <div class="col-md-4">
-            <div class="feature-icon mb-3"><i class="fas fa-shield-alt"></i></div>
-            <h5>Secure Payment</h5>
-            <p>Your transactions are encrypted and 100% secure.</p>
+        <div class="col-lg-3 col-md-6 mb-4">
+            <div class="feature-card">
+                <i class="fas fa-headset feature-icon"></i>
+                <h5>Expert Support</h5>
+                <p>Professional assistance</p>
+                <small class="text-muted">24/7 customer care</small>
+            </div>
         </div>
     </div>
 </section>
 
 
-    <!-- Features -->
-   <section class="container mt-5 text-center">
-    <h2 class="section-title">Coming Soon Features</h2>
+<!-- Coming Soon Features -->
+<section class="container mt-5">
+    <h2 class="section-title">COMING SOON</h2>
     <div class="row">
-        <!-- Feature 1 -->
-       <div class="col-md-4">
-             <div class="feature-icon mb-3"><i class="fas fa-camera text-primary"></i></div>
-             <h5>Virtual Try-On</h5>
-             <p>Try glasses on your face using your camera or photo — instantly!</p>
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="feature-card">
+                <i class="fas fa-camera feature-icon"></i>
+                <h5>Virtual Try-On</h5>
+                <p>Try glasses on your face using your camera or photo — instantly!</p>
+            </div>
         </div>
-
-
-        <!-- Feature 2 -->
-        <div class="col-md-4">
-            <div class="feature-icon mb-3"><i class="fas fa-user-circle"></i></div>
-            <h5>Face Shape Matching</h5>
-            <p>AI-based recommendations to match frames with your face shape.</p>
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="feature-card">
+                <i class="fas fa-user-circle feature-icon"></i>
+                <h5>Face Shape Matching</h5>
+                <p>AI-based recommendations to match frames with your face shape.</p>
+            </div>
         </div>
-
-        <!-- Feature 3 -->
-        <div class="col-md-4">
-            <div class="feature-icon mb-3"><i class="fas fa-sliders-h"></i></div>
-            <h5>Custom Lens Options</h5>
-            <p>Choose anti-glare, blue-light, or photochromic lenses with ease.</p>
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="feature-card">
+                <i class="fas fa-sliders-h feature-icon"></i>
+                <h5>Custom Lens Options</h5>
+                <p>Choose anti-glare, blue-light, or photochromic lenses with ease.</p>
+            </div>
         </div>
     </div>
 </section>
 
 
-    <!-- Categories -->
-    <section class="container mt-5 text-center">
-    <h2 class="section-title">Top Categories</h2>
+    <!-- Top Categories -->
+<section class="container mt-5">
+    <h2 class="section-title">TOP CATEGORIES</h2>
     <div class="row">
-        <div class="col-md-3 category-card">
-            <i class="fas fa-glasses text-primary"></i>
-            <h6>Eyeglasses</h6>
+        <div class="col-lg-3 col-md-6 mb-4">
+            <div class="category-card">
+                <i class="fas fa-glasses"></i>
+                <h6>EYEGLASSES</h6>
+                <p class="text-muted">Prescription & Fashion</p>
+                <a href="shop.php" class="btn btn-sm btn-outline-primary">Shop Now</a>
+            </div>
         </div>
-        <div class="col-md-3 category-card">
-            <i class="fas fa-sun text-primary"></i>
-            <h6>Sunglasses</h6>
+        <div class="col-lg-3 col-md-6 mb-4">
+            <div class="category-card">
+                <i class="fas fa-sun"></i>
+                <h6>SUNGLASSES</h6>
+                <p class="text-muted">Designer & UV Protection</p>
+                <a href="shop.php" class="btn btn-sm btn-outline-primary">Shop Now</a>
+            </div>
         </div>
-        <div class="col-md-3 category-card">
-            <i class="fas fa-eye text-primary"></i>
-            <h6>Contact Lenses</h6>
+        <div class="col-lg-3 col-md-6 mb-4">
+            <div class="category-card">
+                <i class="fas fa-eye"></i>
+                <h6>CONTACT LENSES</h6>
+                <p class="text-muted">Daily & Monthly</p>
+                <a href="shop.php" class="btn btn-sm btn-outline-primary">Shop Now</a>
+            </div>
         </div>
-        <div class="col-md-3 category-card">
-    <i class="fas fa-glasses text-primary"></i>
-    <h6>Blue Light Glasses</h6>
-</div>
-
+        <div class="col-lg-3 col-md-6 mb-4">
+            <div class="category-card">
+                <i class="fas fa-laptop"></i>
+                <h6>BLUE LIGHT GLASSES</h6>
+                <p class="text-muted">Digital Eye Strain Relief</p>
+                <a href="shop.php" class="btn btn-sm btn-outline-primary">Shop Now</a>
+            </div>
+        </div>
     </div>
 </section>
 
 
 <!-- About Section -->
-    <section class="section " id="about">
-        <div class="container mt-5 text-center">
-             <h2 class="section-title" style="color:white; ">How to Use This Website</h2>
-            <div class="video-box" style="height: 750px;" >  <!-- place css for video -->
-                <video style=" width: 1300px;" controls>   <!-- size css for video -->
-                    <source src="finaldemo.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-        </div>
-    </section>
+<section class="container mt-5" id="about">
+    <h2 class="section-title">HOW TO USE THIS WEBSITE</h2>
+    <div class="video-box">
+        <video controls>
+            <source src="finaldemo.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+</section>
 
 <!-- Testimonials -->
 <?php
@@ -215,7 +256,76 @@ try {
 <!-- Footer -->
 <?php require_once  "footar.php"; ?>
 
+<!-- Scroll to Top Button -->
+<button class="scroll-top" id="scrollTop">
+    <i class="fas fa-arrow-up"></i>
+</button>
+
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Custom JavaScript -->
+<script>
+// Scroll to Top Functionality
+const scrollTopBtn = document.getElementById('scrollTop');
+
+window.addEventListener('scroll', () => {
+    if (window.pageYOffset > 300) {
+        scrollTopBtn.classList.add('show');
+    } else {
+        scrollTopBtn.classList.remove('show');
+    }
+});
+
+scrollTopBtn.addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
+
+// Navbar Scroll Effect
+const navbar = document.querySelector('.navbar');
+window.addEventListener('scroll', () => {
+    if (window.pageYOffset > 100) {
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
+});
+
+// Add fade-in animation to elements when they come into view
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('fade-in');
+        }
+    });
+}, observerOptions);
+
+// Observe all cards and sections
+document.querySelectorAll('.product-card, .feature-card, .category-card, .testimonial').forEach(el => {
+    observer.observe(el);
+});
+
+// Smooth scrolling for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
+});
+</script>
 </body>
 </html>

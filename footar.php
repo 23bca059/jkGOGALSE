@@ -1,110 +1,72 @@
-<style>
-   footer {
-  background-color: #000;
-  color: #f0f0f0;
-  padding: 30px 0;
-}
-
-footer h5 {
-  color: #d4af37;
-  margin-bottom: 10px;
-  font-weight: bold;
-}
-
-footer a {
-  color: #d4af37;
-  text-decoration: none;
-  display: inline-block;
-  margin-bottom: 5px;
-  transition: all 0.3s ease;
-}
-
-footer a:hover {
-  color: #ffd700;
-  text-decoration: underline;
-}
-
-footer hr {
-  border-top: 1px solid rgba(212, 175, 55, 0.2);
-}
-
-footer input,
-footer textarea {
-  background-color: transparent;
-  color: #d4af37;
-  border: 1px solid #d4af37;
-}
-
-footer input::placeholder,
-footer textarea::placeholder {
-  color: #bfa76f;
-}
-
-footer .btn {
-  background-color: #d4af37;
-  color: #000;
-  border: none;
-  font-weight: bold;
-}
-
-footer .btn:hover {
-  background-color: #b8860b;
-}
-</style>
 <!-- Footer -->
-<footer style="background-color: #064860; color: rgba(255, 255, 255, 0.9); padding: 30px 0;">
+<footer>
   <div class="container">
     <div class="row">
-      <!-- About -->
-      <div class="col-md-3 mb-4">
-        <h5 class="text-uppercase">GoGalse</h5>
-        <p>Your trusted online eyewear and accessories shop. Explore frames, lenses, and more from top brands.</p>
+      <!-- Brand -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <h5><i class="fas fa-glasses me-2"></i>SAVANT EYEWEAR</h5>
+        <p>Premium optical solutions featuring iconic frames designed for modern urban living. Excellence meets comfort and functionality.</p>
+        <div class="social-links mt-3">
+          <a href="#" class="me-3"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="me-3"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="me-3"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="me-3"><i class="fab fa-youtube"></i></a>
+        </div>
       </div>
 
       <!-- Quick Links -->
-      <div class="col-md-3 mb-4">
-        <h5 class="text-uppercase">Quick Links</h5>
+      <div class="col-lg-2 col-md-6 mb-4">
+        <h5>COLLECTION</h5>
         <ul class="list-unstyled">
-          <li><a href="shop.php" style="color: rgba(255, 255, 255, 0.8); text-decoration: none;">Shop</a></li>
-          <li><a href="cart.php" style="color: rgba(255, 255, 255, 0.8); text-decoration: none;">Cart</a></li>
-          <li><a href="contact.php" style="color: rgba(255, 255, 255, 0.8); text-decoration: none;">Contact</a></li>
-          <li><a href="#" style="color: rgba(255, 255, 255, 0.8); text-decoration: none;">About Us</a></li>
+          <li><a href="shop.php">Eyeglasses</a></li>
+          <li><a href="shop.php">Sunglasses</a></li>
+          <li><a href="shop.php">Blue Light</a></li>
+          <li><a href="shop.php">Contact Lenses</a></li>
         </ul>
       </div>
 
-      <!-- Follow Us -->
-      <div class="col-md-3 mb-4">
-        <h5 class="text-uppercase">Follow Us</h5>
-        <a href="#" class="me-2" style="color: rgba(255, 255, 255, 0.8);"><i class="bi bi-facebook"></i> Facebook</a><br>
-        <a href="#" class="me-2" style="color: rgba(255, 255, 255, 0.8);"><i class="bi bi-instagram"></i> Instagram</a><br>
-        <a href="#" class="me-2" style="color: rgba(255, 255, 255, 0.8);"><i class="bi bi-twitter"></i> Twitter</a>
+      <!-- Services -->
+      <div class="col-lg-2 col-md-6 mb-4">
+        <h5>SERVICES</h5>
+        <ul class="list-unstyled">
+          <li><a href="eye_test_booking.php">Eye Test</a></li>
+          <li><a href="about.php">About Us</a></li>
+          <li><a href="contact.php">Contact</a></li>
+          <li><a href="shopping-history.php">Order History</a></li>
+        </ul>
       </div>
 
-      <!-- Feedback Form -->
-      <div class="col-md-3 mb-4">
-        <h5 class="text-uppercase">Feedback</h5>
-        <form method="POST" action="save_feedback.php">
-          <div class="mb-2">
-            <input type="text" name="name" class="form-control form-control-sm" placeholder="Your name" required>
+      <!-- Contact Info -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <h5>GET IN TOUCH</h5>
+        <div class="contact-info mb-3">
+          <p><i class="fas fa-phone me-2"></i> +1 (555) 123-4567</p>
+          <p><i class="fas fa-envelope me-2"></i> info@savanteyewear.com</p>
+          <p><i class="fas fa-map-marker-alt me-2"></i> 123 Fashion Ave, NY 10001</p>
+        </div>
+        
+        <!-- Newsletter -->
+        <form method="POST" action="save_feedback.php" class="newsletter-form">
+          <div class="input-group mb-2">
+            <input type="email" name="email" class="form-control" placeholder="Enter your email" required>
+            <button type="submit" class="btn btn-primary">Subscribe</button>
           </div>
-          <div class="mb-2">
-            <input type="email" name="email" class="form-control form-control-sm" placeholder="Your email" required>
-          </div>
-          <div class="mb-2">
-            <textarea name="message" class="form-control form-control-sm" rows="2" placeholder="Your feedback" required></textarea>
-          </div>
-          <button type="submit" class="btn btn-sm btn-light">Send</button>
+          <small class="text-muted">Get updates on new arrivals and exclusive offers</small>
         </form>
       </div>
     </div>
 
-    <hr style="border-top: 1px solid rgba(255, 255, 255, 0.2);">
+    <hr class="my-4">
 
-    <div class="text-center">
-      &copy; 2025 GoGalse. All rights reserved.
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <p class="mb-0">&copy; 2025 Savant Eyewear. All rights reserved.</p>
+      </div>
+      <div class="col-md-6 text-md-end">
+        <a href="#" class="me-3">Privacy Policy</a>
+        <a href="#" class="me-3">Terms of Service</a>
+        <a href="#">Returns</a>
+      </div>
     </div>
   </div>
 </footer>
-
-<!-- Bootstrap icons (if not already included) -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">

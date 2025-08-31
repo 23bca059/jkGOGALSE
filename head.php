@@ -2,33 +2,26 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>GoGalse - Home</title>
+    <title>SAVANT EYEWEAR - Premium Optical Solutions</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
     <!-- Bootstrap CSS & Font Awesome -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-
-    <style>
-        body { background-color: rgb(4, 34, 65); font-family: 'Segoe UI', sans-serif; }
-        .hero { background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/black.PNG') center/cover no-repeat; color: white; padding: 100px 0; text-align: center; }
-        .hero h1 { font-size: 3rem; font-weight: bold; }
-        .carousel-item { text-align: center; background-color: #f0f0f0; }
-        .carousel-item img { max-height: 500px; object-fit: contain; margin: auto; }
-        .section-title { font-size: 2rem; font-weight: bold; margin-bottom: 20px; }
-        .feature-icon { font-size: 3rem; color: #0d6efd; }
-        .category-card i { font-size: 2.5rem; margin-bottom: 10px; }
-        .testimonial { background-color: white; padding: 25px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.05); margin-bottom: 20px; }
-    </style>
+    
+    <!-- Savant Custom Styles -->
+    <link href="css/savant-style.css" rel="stylesheet">
 </head>
 <body>
-<!-- Navbar -->
- 
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg fixed-top">
     <div class="container">
-        <a class="navbar-brand" href="#"><i class="fas fa-store"></i> GoGalse</a>
+        <a class="navbar-brand" href="index.php">
+            <i class="fas fa-store"></i> GoGalse
+        </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -40,8 +33,8 @@
                 <li class="nav-item"><a class="nav-link" href="cart.php">Cart</a></li>
                 <li class="nav-item"><a class="nav-link" href="contact.php">Contact</a></li>
                 <li class="nav-item"><a class="nav-link" href="recover.php">Order</a></li>
-                <li class="nav-item"><a class="nav-link" href="eye_test_booking.php">eye test booking</a></li>
-                <li class="nav-item"><a class="nav-link" href="shopping-history.php">shopping-history</a></li> 
+                <li class="nav-item"><a class="nav-link" href="eye_test_booking.php">Eye Test Booking</a></li>
+                <li class="nav-item"><a class="nav-link" href="shopping-history.php"><i class="fas fa-history"></i> Shopping History</a></li> 
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="profileDropdown" role="button" data-bs-toggle="dropdown">
                         <i class="fas fa-user-circle"></i> Profile
